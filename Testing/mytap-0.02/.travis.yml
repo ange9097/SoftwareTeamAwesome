@@ -1,7 +1,25 @@
-deploy:
-	provider: script
+services:
+  - mysql
 
-	script: mysql -u root -p --disable-pager --batch --raw --skip-column-names --unbuffered --database testfinal --execute 'source Testing/mytap-0.02/test.sql'
+sudo: true
 
-	on:
-		branch: master
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-server
+      - mysql-client
+
+dist: trusty
+
+sudo: required
+
+before_script:
+  - echo "USE mysql;\nUPDATE user SET password=PASSWORD('password') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
+  - mysql -u root -e 'CREATE DATABASE testfinal;'
+  - mysql -u root testfinal < Testing/mytap-0.02/sta_users.sql;
+  - mysql -u root testfinal < Testing/mytap-0.02/sta_calendarEvents.sql;
+
+script:
+  - ./Testing/mytap-0.02/terminalcommand.txt
