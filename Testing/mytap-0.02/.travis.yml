@@ -1,7 +1,7 @@
 deploy:
 	provider: script
 
-	script: mysql -u root -p --disable-pager --batch --raw --skip-column-names --unbuffered --database testfinal --execute 'source test.sql'
+	script: mysql -u root -p --disable-pager --batch --raw --skip-column-names --unbuffered --database testfinal --execute 'source Testing/mytap-0.02/test.sql'
 
 	on:
-		branch: Testing/mytap-0.02
+		branch: master
