@@ -1,0 +1,10 @@
+.menubar{
+	background-color: black;
+	height: 50px;
+}
+
+table{
+	background-color: lightblue;
+  max-width: 800px;
+  margin: auto;
+}

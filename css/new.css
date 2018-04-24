@@ -1,0 +1,16 @@
+.menubar{
+	background-color: black;
+	height: 50px;
+}
+
+.inputs {
+	padding: 2px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.blue {
+	background-color: lightblue;
+  max-width: 300px;
+  margin: auto;
+}

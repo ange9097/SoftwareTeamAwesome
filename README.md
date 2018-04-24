@@ -1,2 +1,0 @@
-# SoftwareTeamAwesome
-Software Class Project

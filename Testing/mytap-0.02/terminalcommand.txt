@@ -1,1 +1,0 @@
-mysql -u root --disable-pager --batch --raw --skip-column-names --unbuffered --database testfinal --execute 'source Testing/mytap-0.02/test.sql'

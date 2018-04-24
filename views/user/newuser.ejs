@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>New User</title>
+  <link href="../../css/user.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="menubar">
+    <%- include ../layouts/menubar_guest.ejs %>
+  </div>
+  <% if (messages.error) { %>
+     <p style="color:red; text-align: center;"><%- messages.error %></p>
+  <% } else { %>
+    <br><br>
+  <% } %>
+  <div>
+    <div class="blue">
+      <h1 style="text-align: center">New User</h1>
+      <form method="post" name="newuser">
+        <div class="formSection">
+          <label for="firstname">First Name: </label>
+          <input name="firstname" id="firstname" type="text">
+        </div>
+        <div class="formSection">
+          <label for="lastname">Last Name: </label>
+          <input name="lastname" id="lastname" type="text">
+        </div>
+        <div class="formSection">
+          <label for="username">Username: </label>
+          <input name="username" id="username" type="text">
+        </div>
+        <div class="formSection">
+          <label for="password">Password: </label>
+          <input name="password" id="password" type="password">
+        </div>
+        <div class="formSection">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

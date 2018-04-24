@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>My Appointments</title>
+  <link href="/css/appointments.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="menubar">
+    <%- include ../layouts/menubar_login.ejs %>
+  </div>
+  <h1 style="text-align: center">My Appointments</h1>
+  <% if (messages.error) { %>
+	   <p style="color:red; text-align: center;"><%- messages.error %></p>
+  <% } else if (messages.success) { %>
+	   <p style="color:green; text-align: center;"><%- messages.success %></p>
+  <% } else { %>
+    <br><br>
+  <% } %>
+  <div>
+    <div class="blue">
+      <table width="60%" border=1>
+        <tr style="text-align: left">
+          <th>Date</th>
+          <th>Time</th>
+          <th>Reason for visit</th>
+          <th>Description (if provided)</th>
+          <th>Action</th>
+        </tr>
+        <% if(data) { %>
+          <% data.forEach(function(i){ %>
+            <tr>
+              <td><%= i.date %></td>
+              <td><%= i.time %></td>
+              <td><%= i.reason %></td>
+              <td><%= i.description %></td>
+              <td>
+                <div style="float: left">
+                  <form method="post" action="/cal/cancel/<%= i.id %>">
+                    <input type="submit" name="cancel" value="Cancel Appointment" onclick="return confirm('Are you sure you want to cancel your appointment?')" />
+                    <input type="hidden" name="_method" value="DELETE" />
+                  </form>
+                </div>
+              </td>
+            </tr>
+          <% }) %>
+        <% } %>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
