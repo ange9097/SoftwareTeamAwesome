@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Login</title>
+  <link href="/css/user.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="menubar">
+    <%- include ../layouts/menubar_guest.ejs %>
+  </div>
+  <% if (messages.error) { %>
+	   <p style="color:red; text-align: center;"><%- messages.error %></p>
+  <% } else if (messages.success) { %>
+	   <p style="color:green; text-align: center;"><%- messages.success %></p>
+  <% } else { %>
+    <br><br>
+  <% } %>
+  <div>
+    <div class="blue">
+      <h1 style="text-align: center">Login</h1>
+      <form method="post" name="login">
+        <div>
+          <div class="formSection">
+            <label for="username" class="label">Username</label>
+            <input class="textBox" type="text" name="username" id="username"/>
+          </div>
+          <div class="formSection">
+            <label for="password" class="label">Password</label>
+            <input class="textBox" type="password" name="password" id="password"/>
+          </div>
+          <div class="formSection">
+            <input type="submit" value="Log In">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

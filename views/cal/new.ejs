@@ -1,0 +1,125 @@
+<html>
+<head>
+  <title>New Appointment</title>
+  <link href="/css/new.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+
+    var bookedTimes = <%- JSON.stringify(bookedTimes) %>;
+
+    function hideElements(){
+      document.getElementById('timeDiv').hidden = true;
+      document.getElementById('reasonDiv').hidden = true;
+      document.getElementById('descriptionDiv').hidden = true;
+      document.getElementById('submitDiv').hidden = true;
+    }
+
+    function showElements(){
+      document.getElementById('timeDiv').hidden = false;
+      document.getElementById('reasonDiv').hidden = false;
+      document.getElementById('descriptionDiv').hidden = false;
+      document.getElementById('submitDiv').hidden = false;
+    }
+
+    function updateTime(){
+      document.getElementById('timeInput').value = document.getElementById('time').value;
+    }
+
+    function findAvailableTimes(){
+      for (var o in document.getElementById('time').options){
+        document.getElementById('time').remove(o);
+      }
+      var option = document.createElement('option');
+      option.text = "9 AM";
+      option.value = 9;
+      document.getElementById('time').add(option);
+      var option = document.createElement('option');
+      option.text = "10 AM";
+      option.value = 10;
+      document.getElementById('time').add(option);
+      var option = document.createElement('option');
+      option.text = "11 AM";
+      option.value = 11;
+      document.getElementById('time').add(option);
+      var option = document.createElement('option');
+      option.text = "12 PM";
+      option.value = 12;
+      document.getElementById('time').add(option);
+      var option = document.createElement('option');
+      option.text = "1 PM";
+      option.value = 13;
+      document.getElementById('time').add(option);
+      var option = document.createElement('option');
+      option.text = "2 PM";
+      option.value = 14;
+      document.getElementById('time').add(option);
+      var option = document.createElement('option');
+      option.text = "3 PM";
+      option.value = 15;
+      document.getElementById('time').add(option);
+      var option = document.createElement('option');
+      option.text = "4 PM";
+      option.value = 16;
+      document.getElementById('time').add(option);
+      // Reset time values
+
+      var date = document.getElementById('date').value;
+      //console.log("chosen date: " + date);
+      for(var i = 0 in bookedTimes){
+        //console.log("checking date" + bookedTimes[i].fullDate);
+        if(bookedTimes[i].fullDate == date){
+          //console.log("removing " + bookedTimes[i].hour);
+          for(var q = 0 in document.getElementById('time').options){
+            if(document.getElementById('time').options[q].value == bookedTimes[i].hour){
+              document.getElementById('time').remove(q);
+            }
+          }
+        }
+      }
+      showElements();
+      updateTime();
+    }
+  </script>
+</head>
+<body>
+  <div class="menubar">
+    <%- include ../layouts/menubar_login.ejs %>
+  </div>
+  <h1 style="text-align: center">New Appointment</h1>
+  <h3 style="text-align: center">Note: Please be aware that you may only schedule an appointment at least two days later than the current date.</h3>
+  <% if (messages.error) { %>
+     <p style="color:red; text-align: center;"><%- messages.error %></p>
+  <% } else { %>
+    <br><br>
+  <% } %>
+  <div>
+    <div class="blue">
+      <form method="post" name="new">
+        <div class="inputs">
+          <label for="date">Date: </label>
+          <% var minimumDate = new Date(Date.now()); minimumDate.setDate(minimumDate.getDate() + 2); %>
+          <input type="date" id="date" name="date" min="<%= minimumDate.toISOString().substring(0, 10) %>" onchange="hideElements();">
+          <input type="button" id="getTimes" value="Find Times" onclick="findAvailableTimes()">
+        </div>
+        <br>
+        <div class="inputs" id="timeDiv" hidden>
+          <label for="time">Available Times: </label>
+          <select id="time" onchange="updateTime();">
+          </select>
+          <input type="hidden" name="time" id="timeInput"/>
+        </div>
+        <br>
+        <div class="inputs" id="reasonDiv" hidden>
+          <label for="reason">Reason for your appointment: </label>
+          <input type="text" id="reason" name="reason"></input>
+        </div>
+        <div class="inputs" id="descriptionDiv" hidden>
+          <label for="description">Any details we should know about? (Optional) </label>
+          <input type="text" id="description" name="description"></input>
+        </div>
+        <div class="inputs" id="submitDiv" hidden>
+          <input type="submit" id="submitButton" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</html>

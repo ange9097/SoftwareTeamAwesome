@@ -1,19 +1,21 @@
-<!DOCTYPE html>
 <html>
 	<head>
-	<link href="CSS/ProjectStyle.css" type="text/css" rel="stylesheet"/>
-		<title>Calendar</title>
+	<link href="./css/index.css" type="text/css" rel="stylesheet"/>
+		<title>Home Page</title>
+  </head>
+
+  <body>
+		<div class="menubar">
+    	<%- include layouts/menubar_guest.ejs %>
+		</div>
 		<div>
-		<h1>Dr. Doctor Inc. </h1>
-			<img src="Media/doctor_pic.jpg" height="150" width="160" value="myValue">
+			<h1>Dr. Doctor Inc. </h1>
+			<img src="/media/doctor_pic.jpg" height="150" width="160" value="myValue">
 			<p> Welcome to Dr. Doctor's page! As you can see from the picture, I am a very good doctor. On this website, you can make and cancel appointments, get our information, or contact us. We hope to see you soon!</p>
 		</div>
-	</head>
-
-	<body>
 
 		<div class="main">
-			<img style="float: left" src="Media/office_pic.jpg" id="officePicture" width="598px" height="169*2">
+			<img style="float: left" src="/media/office_pic.jpg" id="officePicture" width="598px" height="169*2">
 			<label for="officePicture" style="float: left">Check us out at our new location! It is state of the art!</p>
 		</div>
 
