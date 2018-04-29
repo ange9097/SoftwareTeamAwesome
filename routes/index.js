@@ -9,6 +9,14 @@ app.get('/', function(req, res){
   }
 });
 
+app.get('/about', function(req, res) {
+  if(req.session.login == undefined) {
+    res.render('about_guest')
+  } else {
+    res.render('about_login')
+  }
+});
+
 app.get('/cal', function(req, res) {
   if(req.session.login == undefined){
     req.flash('error', 'You must login to view this page')
