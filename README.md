@@ -15,6 +15,7 @@ The objective of this project is to create an appointment scheduler for people t
 
 
 Sources:
+- Calendar Guide https://code.tutsplus.com/tutorials/how-to-build-a-beautiful-calendar-widget--net-12538
 - https://us.123rf.com/450wm/stocking/stocking1207/stocking120700473/14374945-portrait-of-a-doctor-looking-at-a-radiography.jpg?ver=6
 - https://sabateseye.com/_userfiles/sabates-eye-centers-leawood-kansas.jpg
 - https://womanadvice.ru/sites/default/files/mainimage200x200/vzaimoponimanie_v_seme.jpg.crop_display.jpg
