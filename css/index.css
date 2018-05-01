@@ -1,6 +1,9 @@
-h1 {
-	color: white;
-	text-align: center;
+body {
+    background: linear-gradient(135deg, #3023AE, #C86DD7);
+    background-attachment: fixed;
+    /* text font */
+    /*font-size: 15px;*/
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei;
 }
 
 div{
@@ -8,41 +11,77 @@ div{
 	vertical-align: middle;
 }
 
-p{
-	text-align: center;
-	color: white;
+
+
+.page-header {
+    padding: 20px 30px;
+    overflow: hidden;
+}
+.page-header .brand{
+    color: white;
+    text-decoration: none;
+    float: left;
 }
 
-body{
-	background-color: #53868B;
+.panel {
+    margin: 120px auto 60px;
+    text-align: center;
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;  
+    padding: 1px;
+    transition: box-shadow .30s;
+}
+.panel:hover{
+    box-shadow: #fff 5px 5px 25px;
 }
 
-
-.main{
-	background-color: #B0C4DE;
-	width: 78%;
-	float: right;
-	display: inline;
-	position: absolute;
-	right: 0;
-
+.avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin-top: -60px;
 }
 
-.footer{
-	position: absolute;
-	bottom: -100px;
-	background-color: #B0C4DE;
-	width: 100%;
-	display: inline;
+h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 15px 0 20px;
+}
+p.lead{
+    color: #333;
+    font-style: italic;
+    margin-bottom: 30px;
 }
 
-.number{
-	font-size: 12px;
+.btn {
+    color: white;
+    background: rgb(48, 35, 174);
+    font-size: 16px;
+    line-height: 38px;
+    height: 38px;
+    padding: 0 20px;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .15s;
+}
+.btn:hover {
+    background-color: rgb(81, 67, 224);
 }
 
-.name{
-	font-size: 24px;
+.tags{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #999;
 }
+.tag{
+    margin: 0 15px;
+}
+.tag:before{
+    content: '#'
+}
+
 
 .menubar{
 	background-color: black;
