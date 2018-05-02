@@ -1,3 +1,12 @@
+body {
+    background: linear-gradient(135deg, #3023AE, #C86DD7);
+    background-attachment: fixed;
+    /* text font */
+    /*font-size: 15px;*/
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei;
+}
+
+
 .menubar{
 	background-color: black;
 	height: 50px;
