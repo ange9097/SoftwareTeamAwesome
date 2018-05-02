@@ -7,7 +7,7 @@
   <div class="menubar">
     <%- include ../layouts/menubar_login.ejs %>
   </div>
-  <h1 style="text-align: center">My Appointments</h1>
+  
   <% if (messages.error) { %>
 	   <p style="color:red; text-align: center;"><%- messages.error %></p>
   <% } else if (messages.success) { %>
@@ -16,8 +16,9 @@
     <br><br>
   <% } %>
   <div>
-    <div class="blue">
-      <table width="60%" border=1>
+    <div class="panel">
+      <h1 style="text-align: center">My Appointments</h1>
+      <table width="100%" >
         <tr style="text-align: left">
           <th>Date</th>
           <th>Time</th>
@@ -32,8 +33,8 @@
               <td><%= i.time %></td>
               <td><%= i.reason %></td>
               <td><%= i.description %></td>
-              <td>
-                <div style="float: left">
+              <td style="text-align:center;vertical-align:middle>
+                <div class="btn">
                   <form method="post" action="/cal/cancel/<%= i.id %>">
                     <input type="submit" name="cancel" value="Cancel Appointment" onclick="return confirm('Are you sure you want to cancel your appointment?')" />
                     <input type="hidden" name="_method" value="DELETE" />

@@ -6,6 +6,11 @@ body {
     font-family: "Helvetica Neue", Helvetica, Microsoft Yahei;
 }
 
+h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 15px 0 20px;
+}
 
 .menubar{
 	background-color: black;
@@ -18,8 +23,15 @@ body {
   text-align: left;
 }
 
-.blue {
-	background-color: lightblue;
-  max-width: 300px;
-  margin: auto;
+.panel {
+	margin: 120px auto 60px;
+    text-align: center;
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;  
+    padding: 1px;
+    transition: box-shadow .30s;
+}
+.panel:hover{
+    box-shadow: #fff 5px 5px 25px;
 }

@@ -80,19 +80,23 @@
     }
   </script>
 </head>
+
 <body>
   <div class="menubar">
     <%- include ../layouts/menubar_login.ejs %>
   </div>
-  <h1 style="text-align: center">New Appointment</h1>
-  <h3 style="text-align: center">Note: Please be aware that you may only schedule an appointment at least two days later than the current date.</h3>
-  <% if (messages.error) { %>
-     <p style="color:red; text-align: center;"><%- messages.error %></p>
-  <% } else { %>
-    <br><br>
-  <% } %>
   <div>
-    <div class="blue">
+    <div class="panel">
+      
+        <h1 style="text-align: center">New Appointment</h1>
+        <h3 style="text-align: center">Note: Please be aware that you may only schedule an appointment at least two days later than the current date.</h3>
+        <% if (messages.error) { %>
+        <p style="color:red; text-align: center;"><%- messages.error %></p>
+        <% } else { %>
+        <br><br>
+        <% } %>
+      
+
       <form method="post" name="new">
         <div class="inputs">
           <label for="date">Date: </label>
@@ -120,6 +124,7 @@
           <input type="submit" id="submitButton" value="Submit" />
         </div>
       </form>
+
     </div>
   </div>
 </html>
