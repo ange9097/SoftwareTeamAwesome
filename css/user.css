@@ -63,20 +63,13 @@ input[type=submit]:hover {
     margin-right:15px;
 }
 
-.formSection {
-  padding: 2px;
-  max-width: 300px;
-  text-align: center;
-}
+
 
 span {
     display: block;
     padding-bottom: 5px;
 }
 
-.textBox {
-  float: right;
-}
 
 .menubar{
 	background-color: black;
