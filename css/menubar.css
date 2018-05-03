@@ -14,7 +14,6 @@ ul {
 .navbar {
   overflow: hidden;
   background-color: #333;
-  font-family: Arial;
 }
 
 /* Links inside the navbar */
@@ -28,17 +27,20 @@ ul {
 
 /* The dropdown container */
 .dropdown {
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei;
   float: left;
   overflow: hidden;
 }
 
 /* Dropdown button */
 .dropdown .dropbtn {
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei;
   font-size: 16px;
+  font-weight: bold;
+  padding: 17px 17px 14px;
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */

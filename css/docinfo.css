@@ -1,3 +1,11 @@
+body {
+    background: linear-gradient(135deg, #3023AE, #C86DD7);
+    background-attachment: fixed;
+    /* text font */
+    /*font-size: 15px;*/
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei;
+}
+
 h1 {
 	color: blue;
 	text-align: center;
@@ -22,9 +30,6 @@ p{
 	color: white;
 }
 
-body{
-	background-color: #53868B;
-}
 
 .side_bar{
 	background-color: gray;
@@ -48,7 +53,7 @@ body{
 .footer{
 	position: absolute;
 	bottom: -400px;
-	background-color: #B0C4DE;
+	background-color: black;
 	width: 100%;
 	display: inline;
 }
