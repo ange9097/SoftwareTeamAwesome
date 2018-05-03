@@ -30,7 +30,7 @@
       }
       var option = document.createElement('option');
       option.text = "9 AM";
-      option.value = 9;
+      option.value = '09';
       document.getElementById('time').add(option);
       var option = document.createElement('option');
       option.text = "10 AM";
@@ -87,7 +87,7 @@
   </div>
   <div>
     <div class="panel">
-      
+
         <h1 style="text-align: center">New Appointment</h1>
         <h3 style="text-align: center">Note: Please be aware that you may only schedule an appointment at least two days later than the current date.</h3>
         <% if (messages.error) { %>
@@ -95,7 +95,7 @@
         <% } else { %>
         <br><br>
         <% } %>
-      
+
 
       <form method="post" name="new">
         <div class="inputs">
