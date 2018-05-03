@@ -1,14 +1,69 @@
-ul {
-	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+h1 {
+	color: blue;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 
-.rButtons {
-	text-decoration: none;
-	font-weight: bold;
+div{
+	text-align:center;
+	vertical-align: middle;
 	color: white;
+}
+
+ul{
+	text-align: center;
+	color: white;
+}
+
+p{
+	text-align: center;
+	color: white;
+}
+
+body{
+	background-color: #53868B;
+}
+
+.side_bar{
+	background-color: gray;
+	float: left;
+	width: 20%;
+	display: inline-block;
+	height: 400px;
+
+}
+
+.main{
+	background-color: #B0C4DE;
+	width: 78%;
+	float: right;
+	display: inline;
+	position: absolute;
+	right: 0;
+
+}
+
+.footer{
+	position: absolute;
+	bottom: -400px;
+	background-color: #B0C4DE;
+	width: 100%;
+	display: inline;
+}
+
+.number{
+	font-size: 12px;
+}
+
+.name{
+	font-size: 24px;
+}
+
+.menubar{
+	background-color: black;
+	height: 50px;
 }
 
 .navbar {
@@ -23,6 +78,7 @@ ul {
   font-size: 16px;
   color: white;
   text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
 }
 

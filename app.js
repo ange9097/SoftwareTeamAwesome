@@ -4,6 +4,7 @@ var app = express()
 var mysql = require('mysql')
 var myConnection = require('express-myconnection')
 var config = require('./config')
+var useragent = require('express-useragent')
 var dbOptions = {
   host: config.database.host,
   user: config.database.user,
@@ -33,6 +34,8 @@ app.use(methodOverride(function(req, res){
   }
 }))
 
+
+
 var flash = require('express-flash')
 var cookieParser = require('cookie-parser')
 var session = require('cookie-session')
@@ -45,8 +48,17 @@ app.use(session({
 }))
 app.use(flash())
 
-app.use('/', index);
 app.use(express.static(__dirname));
+
+app.use(useragent.express());
+app.get('*', function(req, res, next){
+    if(req.useragent.isSafari == true){
+      res.render('nosafari');
+    } else {
+      next('route');
+    }
+});
+app.use('/', index);
 
 app.get('*', function(req, res){
   res.render('404');

@@ -10,14 +10,14 @@
   <% if (messages.error) { %>
 	   <p style="color:red; text-align: center;"><%- messages.error %></p>
   <% } else if (messages.success) { %>
-	   <p style="color:green; text-align: center;"><%- messages.success %></p>
+	   <p style="color:white; text-align: center;"><%- messages.success %></p>
   <% } else { %>
     <br><br>
   <% } %>
   <div>
     <div class="panel">
       <h1 style="text-align: center">Login</h1>
-      
+
       <form method="post" name="login">
 
         <span>
@@ -33,7 +33,7 @@
             <input type="password" name="password" id="password">
           </div>
         </span>
-        
+
             <br>
             <input type="submit" value="Log In">
 

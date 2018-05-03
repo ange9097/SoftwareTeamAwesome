@@ -9,6 +9,14 @@ app.get('/', function(req, res){
   }
 });
 
+app.get('/docinfo', function(req, res) {
+  if(req.session.login == undefined) {
+    res.render('doc_guest')
+  } else {
+    res.render('doc_login')
+  }
+});
+
 app.get('/about', function(req, res) {
   if(req.session.login == undefined) {
     res.render('about_guest')
