@@ -33,7 +33,7 @@ table{
 	background-color: white;
   -moz-border-radius:10px;
   -webkit-border-radius:10px;
-  border-radius:10px
+  border-radius:10px;
   max-width: 800px;
   margin: auto;
 }

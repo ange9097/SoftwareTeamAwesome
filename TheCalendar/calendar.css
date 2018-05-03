@@ -4,8 +4,13 @@ This is not being utilized in the project. */
 
 
 body {
-	background: #e0e0e0;
+    background: linear-gradient(135deg, #3023AE, #C86DD7);
+    background-attachment: fixed;
+    /* text font */
+    /*font-size: 15px;*/
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei;
 }
+
 
 #cal {
 	margin:200px auto;
@@ -14,6 +19,7 @@ body {
 	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
 	-webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+	
 }
 
 .header{
@@ -95,6 +101,19 @@ table {
     background:#fff;
     border-collapse:collapse;
 }
+
+
+table.curr tr:last-child td:first-child {
+    -moz-border-radius-bottomleft:10px;
+    -webkit-border-bottom-left-radius:10px;
+    border-bottom-left-radius:10px}
+
+table.curr tr:last-child td:last-child {
+    -moz-border-radius-bottomright:10px;
+    -webkit-border-bottom-right-radius:10px;
+    border-bottom-right-radius:10px}
+
+
 td {
     color:#2b2b2b;
     width:50px;
@@ -103,6 +122,7 @@ td {
     text-align:center;
     border:1px solid #e6e6e6;
 }
+
 #days td {
     height:26px;
     line-height: 26px;
