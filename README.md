@@ -1,7 +1,7 @@
 # SoftwareTeamAwesome
 Software Class Project
 
-Link to site: https://appointment-web-app.herokuapp.com/
+Link to site: https://software-team-awesome.herokuapp.com
 
 Team Members:
 - Imran Dawud
