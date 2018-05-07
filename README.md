@@ -5,14 +5,14 @@ Link to site: https://software-team-awesome.herokuapp.com
 
 Team Members:
 - Imran Dawud
-- Andre Gelfman
+- Andrew Gelfman
 - Kyle Gorges
 - Abby Johnson
 - Yuxiang Wang
 - Dongyu Wu
 
 Project Description
-The objective of this project is to create an appointment scheduler for people to use at a doctor's office. The idea is that people can come to the website, browse through it and search for information while being able to create an account and login. They would be able to login and create an appointment or cancel it.
+The objective of this project was to create an appointment scheduler that people could use to schedule doctor's appointments online. The idea is that people can come to the website, find information about the doctor, create an account, and login. Once logged in they would be able to create and/or cancel appointments.
 
 
 Sources:
