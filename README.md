@@ -15,7 +15,7 @@ Project Description:
 The objective of this project was to create an appointment scheduler that people could use to schedule doctor's appointments online. The idea is that people can come to the website, find information about the doctor, create an account, and login. Once logged in they would be able to create and/or cancel appointments.
 
 Testing Protocol:
-Located in the "Testing/mytap-0.02/" directory, the terminal command contained in "terminalcommand.txt" can be run on the Linux terminal using a MySQL database created from "sta_users.sql" and "sta_calendarEvents.sql." This runs the MyTAP testing script from "test.sql" against the database.
+Located in the "Testing/mytap-0.02/" directory, the terminal command contained in "terminalcommand.txt" can be run on the Linux terminal using a MySQL database created from "sta_users.sql" and "sta_calendarEvents.sql." This runs the MyTAP testing script from "test.sql" against the database.  The other files located in the "Testing/mytap-0.02/" directory are needed for MyTAP to run properly.
 
 Sources:
 - Calendar Guide https://code.tutsplus.com/tutorials/how-to-build-a-beautiful-calendar-widget--net-12538
